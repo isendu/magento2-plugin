@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Isendu\ConnectorModule\Api\Data\ItemInterface" type="Isendu\ConnectorModule\Model\Item"/>
+    <preference for="Isendu\ConnectorModule\Api\ItemRepositoryInterface" type="Isendu\ConnectorModule\Model\ItemRepository"/>
+    <preference for="Isendu\ConnectorModule\Api\Data\ItemIsenduInterface" type="Isendu\ConnectorModule\Model\ItemIsendu"/>
+    <preference for="Isendu\ConnectorModule\Api\ItemIsenduRepositoryInterface" type="Isendu\ConnectorModule\Model\ItemIsenduRepository"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="isendu_items_grid_data_source" xsi:type="string">\Isendu\ConnectorModule\Model\ResourceModel\Item\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Magento\Framework\Logger\Handler\Debug" type="Isendu\ConnectorModule\Model\DebugHandler"/>
+</config>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<routes>
+    <route url="/V1/isendu" method="GET">
+        <service class="Isendu\ConnectorModule\Api\ItemRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/isendu/shipping" method="POST">
+        <service class="Isendu\ConnectorModule\Api\ItemRepositoryInterface" method="customPostMethod"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/isendu/config" method="GET">
+        <service class="Isendu\ConnectorModule\Api\ItemIsenduRepositoryInterface" method="getSetup"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/isendu/config" method="POST">
+        <service class="Isendu\ConnectorModule\Api\ItemIsenduRepositoryInterface" method="setupMethod"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+</routes>

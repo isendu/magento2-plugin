@@ -1,0 +1,35 @@
+{
+    "name": "isendu/connector-module",
+    "description": "Isendu Connector Module for Magento 2",
+    "keywords": ["isendu","connector","shipping","magento 2"],
+    "homepage": "https://isendu.com/",
+    "version": "1.0.0",
+    "require": {
+        "php": "~7.1.3||~7.2.0||~7.3.14||~7.3.0||~7.3.1||~7.3.2||~7.3.3||~7.3.4||~7.3.5||~7.3.6||~7.3.7||~7.3.8||~7.3.9||~7.3.10||~7.3.11||~7.3.12||~7.3.13||~7.4.0||~7.4.1||~7.4.2||~7.4.3||~7.4.4||~7.4.5||~7.4.6||~7.4.7||~7.4.8"
+    },
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "extra": {
+        "installer-paths": {
+            "app/code/Isendu/ConnectorModule": ["isendu/connector-module"]
+        }
+    },
+    "authors": [
+        {
+            "name": "Sebastian Frassia ",
+            "email": "sebastian@frassia.com",
+            "homepage": "https://www.frassia.com",
+            "role": "Full Stack Developer"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Isendu\\ConnectorModule\\": ""
+        }
+    }
+}

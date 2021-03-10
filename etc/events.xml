@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_after">
+        <observer instance="Isendu\ConnectorModule\Observer\Sales\OrderPlaceAfter" name="isendu_connector_observer_sales_orderplaceafter_sales_order_place_after"/>
+    </event>
+    <event name="sales_order_shipment_save_after">
+        <observer instance="Isendu\ConnectorModule\Observer\Sales\OrderShipmentSaveAfter" name="isendu_connector_observer_sales_order_shipment_save_after"/>
+    </event>
+
+</config>
