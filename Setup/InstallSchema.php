@@ -70,7 +70,7 @@ class InstallSchema implements InstallSchemaInterface
             ['nullable' => true],
             'DateUpdated'
         )->addIndex(
-            $setup->getIdxName('isendu_connector_item', ['name']),
+            $setup->getIdxName('isendu_connector_item', ['isendu_id']),
             ['isendu_id']
         )->setComment(
             'Isendu Items'
@@ -102,7 +102,7 @@ class InstallSchema implements InstallSchemaInterface
         ['nullable' => false],
         'Url'
     )   ->addIndex(
-            $setup->getIdxName('isendu_connector_config', ['name']),
+            $setup->getIdxName('isendu_connector_config', ['token']),
             ['token']
         )->setComment(
             'Config Isendu'
